@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>James J. Blackburn | Author · Entrepreneur · Student of Jesus, Follower of Christ</title>
+  <meta name="description" content="James J. Blackburn — author, entrepreneur, husband, student of Jesus and follower of Christ based in Fort Lauderdale, Florida. Founder of Stairway Mortgage and author of The SonFlower and the Bear." />
+  <meta name="keywords" content="James J Blackburn, James Blackburn, Jim Blackburn, Fort Lauderdale, author, entrepreneur, Stairway Mortgage" />
+  <meta name="author" content="James J. Blackburn" />
+  <link rel="canonical" href="https://www.jamesjblackburn.com" />
+
+  <meta property="og:title" content="James J. Blackburn" />
+  <meta property="og:description" content="Author. Entrepreneur. Student of Jesus, Follower of Christ. Fort Lauderdale, Florida." />
+  <meta property="og:url" content="https://www.jamesjblackburn.com" />
+  <meta property="og:type" content="profile" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #0d0c0b;
+      --off:      #111210;
+      --white:    #f7f4ef;
+      --cream:    #ede8df;
+      --gold:     #c9a96e;
+      --gold-dim: #7a6340;
+      --rust:     #b85c38;
+      --navy:     #1e2d40;
+      --mid:      #3a3530;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+
+    /* FL STRIP */
+    .fl-strip {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 300;
+      background: var(--gold);
+      padding: .45rem 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .75rem;
+      font-size: .62rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    .fl-strip a {
+      color: var(--black);
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(13,12,11,.3);
+    }
+
+    .fl-strip a:hover { border-color: var(--black); }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 30px; left: 0; right: 0;
+      z-index: 200;
+      padding: 1.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(13,12,11,.92) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: .95rem;
+      font-weight: 400;
+      letter-spacing: .08em;
+      color: var(--white);
+      text-decoration: none;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: baseline;
+      gap: .7rem;
+    }
+
+    .nav-tag {
+      font-family: var(--sans);
+      font-size: .52rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(201,169,110,.6);
+      font-weight: 300;
+    }
+
+    @media(max-width:900px) { .nav-tag { display: none; } }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-links a {
+      font-size: .62rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(247,244,239,.85);
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.highlight { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 11rem 4rem 6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 40%, rgba(201,169,110,.07) 0%, transparent 55%),
+        radial-gradient(ellipse at 20% 80%, rgba(184,92,56,.05) 0%, transparent 45%),
+        var(--black);
+    }
+
+    .hero-bg::after {
+      content: 'JB';
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--serif);
+      font-size: 38vw;
+      font-weight: 900;
+      color: rgba(255,255,255,.018);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+    }
+
+    .hero-pre {
+      font-size: .62rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      animation: fadeUp .8s ease both;
+    }
+
+    .hero-pre::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: .5;
+    }
+
+    .hero-headline {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 7vw, 8rem);
+      font-weight: 400;
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 3rem;
+      animation: fadeUp .9s .1s ease both;
+    }
+
+    .hero-headline .line-accent { font-style: italic; color: var(--gold); }
+    .hero-headline .line-dim { color: rgba(247,244,239,.28); }
+
+    .hero-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      animation: fadeUp .9s .2s ease both;
+    }
+
+    .hero-bio {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: rgba(247,244,239,.88);
+      line-height: 1.9;
+    }
+
+    .hero-bio strong { color: var(--white); font-weight: 400; }
+    .hero-bio em { font-style: italic; color: var(--gold); }
+
+    .hero-right { display: flex; flex-direction: column; gap: 2rem; }
+
+    .hero-pillars { display: flex; flex-direction: column; gap: .6rem; }
+
+    .pillar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: .7rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(247,244,239,.88);
+    }
+
+    .pillar-num {
+      font-family: var(--serif);
+      font-size: .62rem;
+      color: var(--gold-dim);
+      width: 20px;
+      flex-shrink: 0;
+    }
+
+    .pillar-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(201,169,110,.15);
+    }
+
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .9rem 2rem;
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all .25s;
+    }
+
+    .btn-gold { background: var(--gold); color: var(--black); }
+    .btn-gold:hover { background: #d4b07a; }
+
+    .btn-outline {
+      background: transparent;
+      color: rgba(247,244,239,.85);
+      border: 1px solid rgba(247,244,239,.12);
+    }
+
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 3rem;
+      left: 4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: .58rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(247,244,239,.18);
+      animation: fadeUp 1s .5s ease both;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: .3; }
+      50% { opacity: .8; }
+    }
+
+    /* PORTRAIT SECTION */
+    .section-portrait {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 65vh;
+    }
+
+    .portrait-image {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      min-height: 460px;
+    }
+
+    .portrait-image-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #1e2d40 0%, #0d1520 100%);
+    }
+
+    .portrait-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      color: rgba(201,169,110,.22);
+      font-size: .58rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .portrait-placeholder svg { width: 52px; height: 52px; }
+
+    .portrait-text {
+      background: var(--off);
+      padding: 6rem 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .portrait-text::before {
+      content: '"';
+      position: absolute;
+      top: 2.5rem;
+      left: 4rem;
+      font-family: var(--serif);
+      font-size: 8rem;
+      color: rgba(201,169,110,.06);
+      line-height: 1;
+    }
+
+    .portrait-quote {
+      font-family: var(--serif);
+      font-size: clamp(1.3rem, 2.2vw, 2rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--white);
+      line-height: 1.55;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .portrait-quote em { color: var(--gold); font-style: normal; }
+
+    .portrait-attr {
+      font-size: .62rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .7;
+    }
+
+    .portrait-sub {
+      margin-top: 2.5rem;
+      font-size: .84rem;
+      color: rgba(247,244,239,.68);
+      line-height: 1.85;
+      max-width: 360px;
+    }
+
+    /* WORLD SECTION */
+    .section-world {
+      padding: 8rem 4rem;
+      background: var(--black);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+    }
+
+    .section-eyebrow {
+      font-size: .6rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .8rem;
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.15;
+    }
+
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .section-link {
+      font-size: .6rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,169,110,.2);
+      padding-bottom: .2rem;
+      transition: color .2s;
+      white-space: nowrap;
+    }
+
+    .section-link:hover { color: var(--gold); }
+
+    .world-row-label {
+      grid-column: 1 / -1;
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: .02em;
+      color: var(--white);
+      padding: 2.5rem 0 1rem;
+      border-top: 1px solid rgba(201,169,110,.15);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .world-row-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(201,169,110,.12);
+    }
+
+    .world-row-label::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .world-row-label--biz {
+      color: rgba(247,244,239,.7);
+      border-top-color: rgba(201,169,110,.08);
+    }
+
+    .world-row-label--biz::before { background: var(--rust); }
+
+    .world-row-spacer { display: none; }
+
+    /* Personal cards — warm dark, intimate */
+    .world-card--warm { background: #0e110e; }
+    .world-card--warm:hover { background: #131713; }
+
+    /* Business cards — dark navy-slate, professional */
+    .world-card { background: #0d1520; }
+    .world-card:hover { background: #111d2d; }
+
+    /* Blog header card — navy standout */
+    .world-card--blog {
+      background: var(--navy);
+      border-top: 2px solid rgba(201,169,110,.35);
+    }
+    .world-card--blog:hover { background: #243550; }
+    .world-card--blog h3 { font-size: 1.6rem; }
+
+    /* Recent post cards — clearly different zone */
+    .world-card--post {
+      background: #07080a;
+      padding: 2rem 2.5rem;
+      border-top: none;
+      border-left: 2px solid rgba(201,169,110,.15);
+    }
+    .world-card--post:hover { background: #0d0f14; }
+    .world-card--post::after { background: var(--gold); }
+
+    /* Recent posts zone separator */
+    .world-posts-label {
+      grid-column: 1 / -1;
+      font-size: .56rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      padding: 1.2rem 0 .3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-top: 1px dashed rgba(201,169,110,.15);
+    }
+
+    .world-posts-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(201,169,110,.06);
+    }
+
+    .world-post-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-style: italic;
+      color: rgba(247,244,239,.88);
+      line-height: 1.45;
+      flex: 1;
+      margin-top: .5rem;
+    }
+
+    .world-card--post:hover .world-post-title { color: var(--white); }
+
+    .world-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .world-card {
+      background: var(--off);
+      padding: 3rem 2.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      position: relative;
+      overflow: hidden;
+      transition: background .3s;
+    }
+
+    .world-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+
+    .world-card:hover::after { transform: scaleX(1); }
+    .world-card:hover { background: #161514; }
+
+    .world-tag {
+      font-size: .57rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 1.2rem;
+    }
+
+    .world-card h3 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: .8rem;
+      line-height: 1.3;
+    }
+
+    .world-card p {
+      font-size: .81rem;
+      color: rgba(247,244,239,.80);
+      line-height: 1.75;
+    }
+
+    .world-arrow {
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      font-size: .9rem;
+      color: var(--gold);
+      opacity: 0;
+      transform: translate(-4px, 4px);
+      transition: all .3s;
+    }
+
+    .world-card:hover .world-arrow { opacity: 1; transform: translate(0,0); }
+
+    /* WRITING SECTION */
+    .section-writing {
+      background: var(--cream);
+      color: var(--black);
+      padding: 8rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-writing::before {
+      content: 'THE SONFLOWER';
+      position: absolute;
+      bottom: -2rem;
+      right: -1rem;
+      font-family: var(--serif);
+      font-size: 12vw;
+      font-weight: 900;
+      color: rgba(13,12,11,.04);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .writing-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-writing .section-eyebrow { color: var(--rust); }
+    .section-writing .section-title { color: var(--black); }
+    .section-writing .section-title em { color: var(--rust); }
+
+    .writing-body p {
+      font-family: var(--serif);
+      font-size: 1.08rem;
+      color: rgba(13,12,11,.55);
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+
+    .writing-body p strong { color: var(--black); font-weight: 500; }
+
+    .book-spine-grid {
+      display: grid;
+      grid-template-columns: repeat(13, 1fr);
+      gap: 4px;
+      height: 200px;
+      margin-top: 2.5rem;
+    }
+
+    .book-spine {
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .book-spine-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-spine-num {
+      font-family: var(--serif);
+      font-size: .5rem;
+      color: rgba(255,255,255,.35);
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+
+    /* REVELATIONS */
+    .section-revelations-home {
+      background: var(--black);
+      padding: 8rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-revelations-home::before {
+      content: 'REVELATIONS';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--serif);
+      font-size: clamp(5rem, 12vw, 14rem);
+      font-weight: 900;
+      color: rgba(255,255,255,.015);
+      white-space: nowrap;
+      pointer-events: none;
+      letter-spacing: .1em;
+    }
+
+    .revelations-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .revelations-left .section-title { color: var(--white); }
+    .revelations-left .section-title em { color: var(--gold); }
+
+    .revelations-desc {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1rem;
+      color: rgba(247,244,239,.80);
+      line-height: 1.8;
+      margin: 1.5rem 0 2.5rem;
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      background: rgba(255,255,255,.04);
+    }
+
+    .post-item {
+      background: var(--off);
+      padding: 1.8rem 2.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      transition: background .2s;
+    }
+
+    .post-item:hover { background: #161514; }
+
+    .post-item-tag {
+      font-size: .57rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .8;
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+    .post-item-title {
+      font-family: var(--serif);
+      font-size: .98rem;
+      color: rgba(247,244,239,.80);
+      flex: 1;
+      line-height: 1.4;
+    }
+
+    .post-item:hover .post-item-title { color: var(--white); }
+
+    .post-item-arrow {
+      color: var(--gold);
+      opacity: 0;
+      transition: opacity .2s;
+    }
+
+    .post-item:hover .post-item-arrow { opacity: 1; }
+
+    /* CONNECT */
+    .section-connect-home {
+      background: var(--navy);
+      padding: 7rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-connect-home::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(201,169,110,.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .connect-name {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: .8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .connect-tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .connect-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .connect-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .7rem 1.4rem;
+      border: 1px solid rgba(201,169,110,.4);
+      font-size: .6rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgba(247,244,239,.88);
+      transition: all .2s;
+    }
+
+    .connect-link:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .58rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(247,244,239,.88);
+    }
+
+    footer a { color: inherit; text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .fl-strip, nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .hero { padding: 10rem 1.5rem 5rem; }
+      .hero-body { grid-template-columns: 1fr; gap: 2.5rem; }
+      .section-portrait { grid-template-columns: 1fr; }
+      .portrait-image { min-height: 280px; }
+      .portrait-text { padding: 3rem 2rem; }
+      .section-world, .section-writing,
+      .section-revelations-home, .section-connect-home { padding: 5rem 1.5rem; }
+      .world-grid { grid-template-columns: 1fr; }
+      .writing-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .revelations-layout { grid-template-columns: 1fr; gap: 3rem; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .nav-links { display: none; }
+      .book-spine-grid { grid-template-columns: repeat(7, 1fr); height: 120px; }
+    }
+  
+    .world-row-label {
+      grid-column: 1 / -1;
+      font-size: .56rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      padding: 1.8rem 0 .4rem;
+      border-top: 1px solid rgba(201,169,110,.1);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .world-row-label::after { content:''; flex:1; height:1px; background:rgba(201,169,110,.07); }
+    .world-row-label--biz { color: rgba(201,169,110,.4); padding-top: 2.5rem; }
+    .world-row-spacer { display: none; }
+    .world-card--warm { background: #0f1008; }
+    .world-card--warm:hover { background: #161610; }
+    .world-card--blog {
+      background: var(--navy);
+      border-top: 2px solid rgba(201,169,110,.3);
+    }
+    .world-card--blog:hover { background: #243550; }
+    .world-card--blog h3 { font-size: 1.6rem; }
+    .world-card--post { background: #0d0f14; padding: 2rem 2.5rem; }
+    .world-card--post:hover { background: #131620; }
+    .world-post-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: rgba(247,244,239,.65);
+      line-height: 1.4;
+      flex: 1;
+      font-style: italic;
+    }
+    .world-card--post:hover .world-post-title { color: var(--white); }
+  
+  /* ═══ SHARED HEADER CSS ═══ */
+  #site-header { position:relative; }
+
+  .fl-strip {
+    background:#c9a96e;color:#0d0c0b;
+    padding:.6rem 3rem;font-size:.6rem;letter-spacing:.15em;
+    text-transform:uppercase;display:flex;align-items:center;gap:.8rem;
+    justify-content:space-between;
+  }
+  .fl-strip a { color:#0d0c0b;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(13,12,11,.3); }
+  .fl-strip a:hover { border-bottom-color:#0d0c0b; }
+
+  .site-nav {
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    padding:1.1rem 3rem;
+    display:flex;justify-content:space-between;align-items:center;
+    background:rgba(13,12,11,.94);
+    border-bottom:1px solid rgba(201,169,110,.1);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+  }
+  .nav-logo {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:.95rem;font-weight:400;letter-spacing:.06em;
+    color:#f7f4ef;text-decoration:none;
+    display:flex;align-items:baseline;gap:.6rem;
+  }
+  .nav-tag {
+    font-family:'Inter',sans-serif;
+    font-size:.48rem;letter-spacing:.16em;text-transform:uppercase;
+    color:rgba(201,169,110,.55);font-weight:300;
+  }
+  .nav-links {
+    list-style:none;display:flex;gap:2rem;
+  }
+  .nav-links a {
+    font-family:'Inter',sans-serif;
+    font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+    text-decoration:none;color:rgba(247,244,239,.65);transition:color .2s;
+  }
+  .nav-links a:hover { color:#c9a96e; }
+
+  /* Hamburger */
+  .nav-hamburger {
+    display:none;flex-direction:column;gap:5px;
+    background:none;border:none;cursor:pointer;padding:.3rem;
+  }
+  .nav-hamburger span {
+    display:block;width:22px;height:1.5px;
+    background:rgba(247,244,239,.7);transition:all .25s;
+  }
+
+  /* Mobile nav */
+  .nav-mobile {
+    display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+    background:#0d0c0b;z-index:199;
+    flex-direction:column;justify-content:center;align-items:center;
+    gap:1.5rem;
+  }
+  .nav-mobile.open { display:flex; }
+  .nav-mobile a {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:1.6rem;font-weight:400;font-style:italic;
+    color:rgba(247,244,239,.8);text-decoration:none;
+    transition:color .2s;
+  }
+  .nav-mobile a:hover { color:#c9a96e; }
+
+  /* Body offset for fixed nav */
+  body { padding-top:52px; }
+
+  /* ═══ SHARED FOOTER CSS ═══ */
+  .site-footer {
+    background:#090908;
+    border-top:1px solid rgba(201,169,110,.08);
+    padding:4rem 4rem 2rem;
+    font-family:'Inter',sans-serif;
+  }
+  .footer-top {
+    display:grid;grid-template-columns:1fr 2fr;
+    gap:4rem;padding-bottom:3rem;
+    border-bottom:1px solid rgba(201,169,110,.08);
+  }
+  .footer-name {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:1.3rem;color:#f7f4ef;margin-bottom:.4rem;
+  }
+  .footer-tag {
+    font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;
+    color:rgba(201,169,110,.5);margin-bottom:.6rem;
+  }
+  .footer-faith {
+    font-family:'Playfair Display',Georgia,serif;
+    font-style:italic;font-size:.85rem;
+    color:rgba(247,244,239,.3);
+  }
+  .footer-links { display:grid;grid-template-columns:repeat(3,1fr);gap:2rem; }
+  .footer-col { display:flex;flex-direction:column;gap:.6rem; }
+  .footer-col-label {
+    font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;
+    color:rgba(201,169,110,.4);margin-bottom:.3rem;
+  }
+  .footer-col a {
+    font-size:.75rem;color:rgba(247,244,239,.45);
+    text-decoration:none;transition:color .2s;line-height:1.4;
+  }
+  .footer-col a:hover { color:#c9a96e; }
+  .footer-bottom {
+    padding-top:1.8rem;
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:1rem;
+    font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(247,244,239,.2);
+  }
+  .footer-bottom a { color:inherit;text-decoration:none;transition:color .2s; }
+  .footer-bottom a:hover { color:#c9a96e; }
+
+  @media(max-width:900px) {
+    .site-nav { padding:1rem 1.2rem; }
+    .nav-tag { display:none; }
+    .nav-links { display:none; }
+    .nav-hamburger { display:flex; }
+    .fl-strip { padding:.6rem 1.2rem;font-size:.52rem; }
+    .site-footer { padding:3rem 1.5rem 2rem; }
+    .footer-top { grid-template-columns:1fr;gap:2.5rem; }
+    .footer-links { grid-template-columns:1fr 1fr; }
+    .footer-bottom { flex-direction:column;align-items:flex-start;gap:.6rem; }
+  }
+  @media(max-width:500px) {
+    .footer-links { grid-template-columns:1fr; }
+  }
+
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+<!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-pre">James J. Blackburn — Fort Lauderdale, Florida</div>
+      <h1 class="hero-headline">
+        I build things.<br/>
+        <span class="line-accent">I study things.</span><br/>
+        <span class="line-dim">I believe things.</span>
+      </h1>
+      <div class="hero-body">
+        <p class="hero-bio">
+          My name is <strong>James Blackburn</strong> — most people call me Jim.
+          I'm a <strong>husband</strong>, a <strong>father</strong>,
+          a <em>student of Jesus and follower of Christ</em>, an author in the middle of something
+          ambitious, and an entrepreneur who's spent two decades helping people
+          build real wealth in Fort Lauderdale and beyond.
+        </p>
+        <div class="hero-right">
+          <div class="hero-pillars">
+            <div class="pillar"><span class="pillar-num">01</span><span>Husband &amp; Father</span><span class="pillar-line"></span></div>
+            <div class="pillar"><span class="pillar-num">02</span><span>Student of Jesus, Follower of Christ</span><span class="pillar-line"></span></div>
+            <div class="pillar"><span class="pillar-num">03</span><span>Author — 13 Books in Progress</span><span class="pillar-line"></span></div>
+            <div class="pillar"><span class="pillar-num">04</span><span>Entrepreneur &amp; Mortgage Professional</span><span class="pillar-line"></span></div>
+            <div class="pillar"><span class="pillar-num">05</span><span>Fort Lauderdale, Florida</span><span class="pillar-line"></span></div>
+          </div>
+          <div class="hero-cta">
+            <a href="#world" class="btn btn-gold">Explore My World</a>
+            <a href="https://www.jamesjblackburn.com/jim-blackburn-fort-lauderdale" class="btn btn-outline">Fort Lauderdale Intro →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- PORTRAIT + PHILOSOPHY -->
+  <section class="section-portrait">
+    <div class="portrait-image">
+      <div class="portrait-image-bg"></div>
+      <div class="portrait-placeholder">
+              <img src="/images/Jim-home.jpeg" alt="James J. Blackburn Fort Lauderdale" style="width:100%;height:100%;object-fit:cover;">
+
+      </div>
+    </div>
+    <div class="portrait-text">
+      <blockquote class="portrait-quote">
+        The goal was never just to be <em>successful</em>.<br/>
+        It was to be <em>faithful</em> with what I was given.
+      </blockquote>
+      <div class="portrait-attr">— James J. Blackburn</div>
+      <p class="portrait-sub">
+        Leverage Wisely. Grow Wealthy. That's not just a business tagline —
+        it's a philosophy rooted in stewardship, intentionality, and the belief
+        that wealth built on the right foundation is wealth that lasts.
+      </p>
+    </div>
+  </section>
+
+  <!-- MY WORLD -->
+  <section class="section-world" id="world">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">What I'm Building</div>
+        <h2 class="section-title">My <em>world</em>,<br/>in six chapters.</h2>
+      </div>
+      <a href="#connect-home" class="section-link">Get in touch →</a>
+    </div>
+        <div class="world-grid">
+
+      <!-- ROW 1 — PERSONAL -->
+      <div class="world-row-label">Personal</div>
+      <div class="world-row-spacer"></div>
+      <div class="world-row-spacer"></div>
+
+      <a href="https://www.jamesjblackburn.com/student-of-jesus-follower-of-christ" class="world-card world-card--warm">
+        <div class="world-tag">Faith · Theology</div>
+        <h3>Student of Jesus,<br/>Follower of Christ</h3>
+        <p>I study Jesus the man — his teachings, his life, his radical wisdom. And I follow the Christ — the divine consciousness within all of us that every spiritual tradition has pointed toward.</p>
+        <span class="world-arrow">→</span>
+      </a>
+      <a href="https://www.jamesjblackburn.com/rio-vista-church-fort-lauderdale" class="world-card world-card--warm">
+        <div class="world-tag">Faith · Community</div>
+        <h3>Rio Vista Church &amp; Bible Study</h3>
+        <p>Olga and I are active members of Rio Vista Church in Fort Lauderdale. My weekly Bible study group is one of the most grounding things in my life.</p>
+        <span class="world-arrow">→</span>
+      </a>
+      <a href="https://www.jamesjblackburn.com/sonflower-and-the-bear" class="world-card world-card--warm">
+        <div class="world-tag">Spiritual Fiction · Author</div>
+        <h3>The SonFlower &amp; the Bear</h3>
+        <p>A 13-book spiritual fiction series years in the making. A Third Testament-style narrative about faith, humanity, and questions most people are afraid to ask.</p>
+        <span class="world-arrow">→</span>
+      </a>
+
+      <!-- ROW 2 — BUSINESS -->
+      <div class="world-row-label world-row-label--biz">Business</div>
+      <div class="world-row-spacer"></div>
+      <div class="world-row-spacer"></div>
+
+      <a href="https://www.jamesjblackburn.com/stairway-mortgage-fort-lauderdale" class="world-card">
+        <div class="world-tag">Mortgage · Finance</div>
+        <h3>Stairway Mortgage</h3>
+        <p>Over $350M in loans closed. Seven years as a national top producer. Non-QM, DSCR, bank statement, and physician loans for people who deserve better than a cookie-cutter answer.</p>
+        <span class="world-arrow">→</span>
+      </a>
+      <a href="https://www.jamesjblackburn.com/blackburn-business-capital" class="world-card">
+        <div class="world-tag">Business Capital</div>
+        <h3>Blackburn Business Capital</h3>
+        <p>Commercial and business funding for entrepreneurs who need real capital — not just hope and a bank application.</p>
+        <span class="world-arrow">→</span>
+      </a>
+      <a href="https://www.jamesjblackburn.com/blackburn-realty-group" class="world-card">
+        <div class="world-tag">Real Estate Acquisition</div>
+        <h3>Blackburn Realty Group</h3>
+        <p>My wife Olga is a licensed Realtor with The Keyes Company — Forbes Global Properties and LeadingRE. I handle the financing. One family. The full transaction.</p>
+        <span class="world-arrow">→</span>
+      </a>
+
+      <!-- ROW 3 — BLOG HEADER (full width) -->
+      <a href="https://www.jamesjblackburn.com/blog" class="world-card world-card--blog">
+        <div class="world-tag">Personal Blog</div>
+        <h3>Revelations — My Blog</h3>
+        <p>Unfiltered thoughts on faith, money, real estate, politics, theology, and whatever I feel like saying. No filter. My space. I write what I believe.</p>
+        <span class="world-arrow">→</span>
+      </a>
+      <div class="world-row-spacer"></div>
+      <div class="world-row-spacer"></div>
+
+
+
+    </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section class="section-writing" id="writing">
+    <div class="writing-layout">
+      <div>
+        <div class="section-eyebrow">Currently Writing</div>
+        <h2 class="section-title">A story<br/><em>13 books</em><br/>in the making.</h2>
+        <div class="book-spine-grid">
+          <div class="book-spine" style="background:linear-gradient(160deg,#2c3e50,#1a252f)"><div class="book-spine-inner"><span class="book-spine-num">I</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#4a3728,#2d1f15)"><div class="book-spine-inner"><span class="book-spine-num">II</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#1e3a2f,#0f2218)"><div class="book-spine-inner"><span class="book-spine-num">III</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#3d2c1e,#241a10)"><div class="book-spine-inner"><span class="book-spine-num">IV</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#2a2040,#170e28)"><div class="book-spine-inner"><span class="book-spine-num">V</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#3a2020,#210e0e)"><div class="book-spine-inner"><span class="book-spine-num">VI</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#1e3040,#0e1c28)"><div class="book-spine-inner"><span class="book-spine-num">VII</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#302810,#1c1708)"><div class="book-spine-inner"><span class="book-spine-num">VIII</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#1a3020,#0d1e10)"><div class="book-spine-inner"><span class="book-spine-num">IX</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#382030,#20101c)"><div class="book-spine-inner"><span class="book-spine-num">X</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#283040,#141824)"><div class="book-spine-inner"><span class="book-spine-num">XI</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#402820,#281510)"><div class="book-spine-inner"><span class="book-spine-num">XII</span></div></div>
+          <div class="book-spine" style="background:linear-gradient(160deg,#c9a96e,#8b6f42)"><div class="book-spine-inner"><span class="book-spine-num" style="color:rgba(13,12,11,.5)">XIII</span></div></div>
+        </div>
+      </div>
+      <div class="writing-body">
+        <p><strong>The SonFlower and the Bear</strong> is a 13-book spiritual fiction series I've been writing for years. It's the kind of project that doesn't let you go — it just waits patiently until you come back to it.</p>
+        <p>It's a Third Testament-style narrative. Not a retelling of scripture. Something original — about faith, humanity, consciousness, and the questions most people are afraid to ask out loud.</p>
+        <p>Book XIII spine is gold. The rest are still being written. <strong>That's the whole point.</strong></p>
+        <a href="https://www.jamesjblackburn.com/sonflower-and-the-bear" class="btn btn-gold" style="margin-top:1.5rem;display:inline-flex;">Learn More About the Series →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVELATIONS TEASER -->
+  <section class="section-revelations-home" id="revelations-home">
+    <div class="revelations-layout">
+      <div class="revelations-left">
+        <div class="section-eyebrow">Personal Blog</div>
+        <h2 class="section-title"><em>Revelations.</em></h2>
+        <p class="revelations-desc">Unfiltered thoughts on faith, money, real estate, politics, and whatever I feel like saying. I write what I believe.</p>
+        <a href="https://www.jamesjblackburn.com/blog" class="btn btn-gold">Read the Blog →</a>
+      </div>
+      <div class="post-list">
+        <a href="https://www.jamesjblackburn.com/blog" class="post-item">
+          <span class="post-item-tag">Faith</span>
+          <span class="post-item-title">Why I think most people misread what the Bible says about wealth</span>
+          <span class="post-item-arrow">→</span>
+        </a>
+        <a href="https://www.jamesjblackburn.com/blog" class="post-item">
+          <span class="post-item-tag">Real Estate</span>
+          <span class="post-item-title">The inherited home conversation nobody wants to have — but everybody needs to</span>
+          <span class="post-item-arrow">→</span>
+        </a>
+        <a href="https://www.jamesjblackburn.com/blog" class="post-item">
+          <span class="post-item-tag">Culture</span>
+          <span class="post-item-title">A rant about the way we've been taught to think about debt</span>
+          <span class="post-item-arrow">→</span>
+        </a>
+        <a href="https://www.jamesjblackburn.com/blog" class="post-item">
+          <span class="post-item-tag">Theology</span>
+          <span class="post-item-title">The difference between being a student of Jesus and a follower of Christ</span>
+          <span class="post-item-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section class="section-connect-home" id="connect-home">
+    <h2 class="connect-name">James J. Blackburn</h2>
+    <p class="connect-tagline">"Leverage Wisely. Grow Wealthy."</p>
+    <div class="connect-links">
+      <a href="https://linkedin.com/in/jimblackburn" target="_blank" class="connect-link">LinkedIn</a>
+      <a href="https://instagram.com/jimblackburn" target="_blank" class="connect-link">Instagram</a>
+      <a href="https://www.stairwaymortgage.com" target="_blank" class="connect-link">Stairway Mortgage</a>
+      <a href="https://www.bbizcap.com" target="_blank" class="connect-link">Business Capital</a>
+      <a href="https://www.jamesjblackburn.com/blog" class="connect-link">Revelations Blog</a>
+      <a href="/cdn-cgi/l/email-protection#7f1516123f0c0b1e160d081e0612100d0b181e181a511c1012" class="connect-link">Email Jim</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 James J. Blackburn · Fort Lauderdale, Florida · NMLS #1072866</span>
+    <span>
+      <a href="https://www.jamesjblackburn.com/jim-blackburn-fort-lauderdale">Fort Lauderdale Introduction</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.stairwaymortgage.com">Stairway Mortgage</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.bbizcap.com">Blackburn Business Capita
+
+
+  <div id="site-footer-wrapper"></div>
+  <script src="components/components.js"></script>
+
+</body>
+</html>

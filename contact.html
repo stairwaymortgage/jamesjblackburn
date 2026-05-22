@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Contact | James J. Blackburn</title>
+  <meta name="description" content="Get in touch with Jim Blackburn — Fort Lauderdale entrepreneur, mortgage professional, and author. Send a message directly."/>
+  <link rel="canonical" href="https://www.jamesjblackburn.com/contact"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --black:#0d0c0b;
+      --off:#111210;
+      --white:#f7f4ef;
+      --gold:#c9a96e;
+      --gold-dim:#7a6340;
+      --rust:#b85c38;
+      --navy:#1e2d40;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'Inter',sans-serif;
+    }
+    html{background:#0d0c0b;color:#f7f4ef}
+    body{
+      background:#0d0c0b;
+      color:#f7f4ef;
+      font-family:var(--sans);
+      font-weight:300;
+      line-height:1.7;
+      overflow-x:hidden;
+      min-height:100vh;
+    }
+
+    /* Grain overlay */
+    body::after{
+      content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;
+      opacity:.035;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size:180px;
+    }
+
+    /* NAV */
+    nav{
+      position:fixed;top:0;left:0;right:0;z-index:100;
+      padding:1.3rem 3rem;
+      display:flex;justify-content:space-between;align-items:center;
+      background:rgba(13,12,11,.92);
+      border-bottom:1px solid rgba(201,169,110,.1);
+    }
+    .nav-back{
+      font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+      text-decoration:none;color:var(--gold-dim);transition:color .2s;
+    }
+    .nav-back:hover{color:var(--gold)}
+    .nav-logo{
+      font-family:var(--serif);font-size:.9rem;
+      color:rgba(247,244,239,.5);
+    }
+
+    /* HERO */
+    .hero{
+      min-height:38vh;
+      display:flex;align-items:flex-end;
+      padding:9rem 4rem 3rem;
+      position:relative;overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at 70% 50%,rgba(201,169,110,.07) 0%,transparent 65%);
+    }
+    .hero-content{position:relative;z-index:1;max-width:700px}
+    .eyebrow{
+      font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:1.2rem;
+      display:flex;align-items:center;gap:.8rem;
+    }
+    .eyebrow::before{content:'';width:32px;height:1px;background:var(--gold);opacity:.6}
+    h1{
+      font-family:var(--serif);
+      font-size:clamp(2.2rem,4.5vw,4rem);
+      font-weight:400;line-height:1.1;
+      color:#f7f4ef;margin-bottom:1rem;
+    }
+    h1 em{font-style:italic;color:var(--gold)}
+    .hero-sub{
+      font-size:.9rem;color:rgba(247,244,239,.55);
+      max-width:480px;line-height:1.8;
+    }
+
+    /* FORM SECTION */
+    .form-section{
+      padding:4rem 4rem 7rem;
+      max-width:760px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.5rem;
+    }
+    .form-group{
+      display:flex;flex-direction:column;gap:.5rem;
+    }
+    .form-group.full{grid-column:1/-1}
+
+    label{
+      font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+      color:var(--gold-dim);
+    }
+    input,textarea,select{
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(201,169,110,.18);
+      color:#f7f4ef;
+      font-family:var(--sans);font-size:.88rem;font-weight:300;
+      padding:.9rem 1.1rem;
+      outline:none;
+      transition:border-color .2s,background .2s;
+      width:100%;
+      -webkit-appearance:none;
+      border-radius:0;
+    }
+    input::placeholder,textarea::placeholder{
+      color:rgba(247,244,239,.2);
+    }
+    input:focus,textarea:focus,select:focus{
+      border-color:rgba(201,169,110,.5);
+      background:rgba(255,255,255,.06);
+    }
+    textarea{
+      resize:vertical;
+      min-height:160px;
+      line-height:1.7;
+    }
+
+    /* Topic select */
+    select{color:rgba(247,244,239,.7)}
+    select option{background:#111210;color:#f7f4ef}
+
+    /* Submit */
+    .form-footer{
+      margin-top:2rem;
+      display:flex;align-items:center;gap:2rem;flex-wrap:wrap;
+    }
+    .btn-submit{
+      display:inline-flex;align-items:center;gap:.6rem;
+      padding:.95rem 2.5rem;
+      background:var(--gold);
+      color:#0d0c0b;
+      font-family:var(--sans);font-size:.62rem;font-weight:500;
+      letter-spacing:.18em;text-transform:uppercase;
+      border:none;cursor:pointer;
+      transition:background .2s;
+    }
+    .btn-submit:hover{background:#d4b07a}
+    .form-note{
+      font-size:.68rem;color:rgba(247,244,239,.3);
+      line-height:1.6;max-width:280px;
+    }
+
+    /* Success message */
+    .success-msg{
+      display:none;
+      padding:1.5rem 2rem;
+      border-left:3px solid var(--gold);
+      background:rgba(201,169,110,.06);
+      font-family:var(--serif);font-style:italic;
+      font-size:1.1rem;color:rgba(247,244,239,.8);
+      margin-top:2rem;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid rgba(201,169,110,.08);
+      padding:2rem 4rem;
+      display:flex;justify-content:space-between;align-items:center;
+      font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+      color:rgba(247,244,239,.35);
+    }
+    footer a{color:inherit;text-decoration:none;transition:color .2s}
+    footer a:hover{color:var(--gold)}
+
+    @media(max-width:768px){
+      nav{padding:1.1rem 1.5rem}
+      .hero{padding:7rem 1.5rem 2.5rem}
+      .form-section{padding:3rem 1.5rem 5rem}
+      .form-grid{grid-template-columns:1fr}
+      .form-group.full{grid-column:1}
+      footer{flex-direction:column;gap:.8rem;text-align:center;padding:2rem 1.5rem}
+    }
+  
+  /* ═══ SHARED HEADER CSS ═══ */
+  #site-header { position:relative; }
+
+  .fl-strip {
+    background:#c9a96e;color:#0d0c0b;
+    padding:.6rem 3rem;font-size:.6rem;letter-spacing:.15em;
+    text-transform:uppercase;display:flex;align-items:center;gap:.8rem;
+    justify-content:space-between;
+  }
+  .fl-strip a { color:#0d0c0b;font-weight:500;text-decoration:none;border-bottom:1px solid rgba(13,12,11,.3); }
+  .fl-strip a:hover { border-bottom-color:#0d0c0b; }
+
+  .site-nav {
+    position:fixed;top:0;left:0;right:0;z-index:200;
+    padding:1.1rem 3rem;
+    display:flex;justify-content:space-between;align-items:center;
+    background:rgba(13,12,11,.94);
+    border-bottom:1px solid rgba(201,169,110,.1);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+  }
+  .nav-logo {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:.95rem;font-weight:400;letter-spacing:.06em;
+    color:#f7f4ef;text-decoration:none;
+    display:flex;align-items:baseline;gap:.6rem;
+  }
+  .nav-tag {
+    font-family:'Inter',sans-serif;
+    font-size:.48rem;letter-spacing:.16em;text-transform:uppercase;
+    color:rgba(201,169,110,.55);font-weight:300;
+  }
+  .nav-links {
+    list-style:none;display:flex;gap:2rem;
+  }
+  .nav-links a {
+    font-family:'Inter',sans-serif;
+    font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+    text-decoration:none;color:rgba(247,244,239,.65);transition:color .2s;
+  }
+  .nav-links a:hover { color:#c9a96e; }
+
+  /* Hamburger */
+  .nav-hamburger {
+    display:none;flex-direction:column;gap:5px;
+    background:none;border:none;cursor:pointer;padding:.3rem;
+  }
+  .nav-hamburger span {
+    display:block;width:22px;height:1.5px;
+    background:rgba(247,244,239,.7);transition:all .25s;
+  }
+
+  /* Mobile nav */
+  .nav-mobile {
+    display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+    background:#0d0c0b;z-index:199;
+    flex-direction:column;justify-content:center;align-items:center;
+    gap:1.5rem;
+  }
+  .nav-mobile.open { display:flex; }
+  .nav-mobile a {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:1.6rem;font-weight:400;font-style:italic;
+    color:rgba(247,244,239,.8);text-decoration:none;
+    transition:color .2s;
+  }
+  .nav-mobile a:hover { color:#c9a96e; }
+
+  /* Body offset for fixed nav */
+  body { padding-top:52px; }
+
+  /* ═══ SHARED FOOTER CSS ═══ */
+  .site-footer {
+    background:#090908;
+    border-top:1px solid rgba(201,169,110,.08);
+    padding:4rem 4rem 2rem;
+    font-family:'Inter',sans-serif;
+  }
+  .footer-top {
+    display:grid;grid-template-columns:1fr 2fr;
+    gap:4rem;padding-bottom:3rem;
+    border-bottom:1px solid rgba(201,169,110,.08);
+  }
+  .footer-name {
+    font-family:'Playfair Display',Georgia,serif;
+    font-size:1.3rem;color:#f7f4ef;margin-bottom:.4rem;
+  }
+  .footer-tag {
+    font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;
+    color:rgba(201,169,110,.5);margin-bottom:.6rem;
+  }
+  .footer-faith {
+    font-family:'Playfair Display',Georgia,serif;
+    font-style:italic;font-size:.85rem;
+    color:rgba(247,244,239,.3);
+  }
+  .footer-links { display:grid;grid-template-columns:repeat(3,1fr);gap:2rem; }
+  .footer-col { display:flex;flex-direction:column;gap:.6rem; }
+  .footer-col-label {
+    font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;
+    color:rgba(201,169,110,.4);margin-bottom:.3rem;
+  }
+  .footer-col a {
+    font-size:.75rem;color:rgba(247,244,239,.45);
+    text-decoration:none;transition:color .2s;line-height:1.4;
+  }
+  .footer-col a:hover { color:#c9a96e; }
+  .footer-bottom {
+    padding-top:1.8rem;
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:1rem;
+    font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(247,244,239,.2);
+  }
+  .footer-bottom a { color:inherit;text-decoration:none;transition:color .2s; }
+  .footer-bottom a:hover { color:#c9a96e; }
+
+  @media(max-width:900px) {
+    .site-nav { padding:1rem 1.2rem; }
+    .nav-tag { display:none; }
+    .nav-links { display:none; }
+    .nav-hamburger { display:flex; }
+    .fl-strip { padding:.6rem 1.2rem;font-size:.52rem; }
+    .site-footer { padding:3rem 1.5rem 2rem; }
+    .footer-top { grid-template-columns:1fr;gap:2.5rem; }
+    .footer-links { grid-template-columns:1fr 1fr; }
+    .footer-bottom { flex-direction:column;align-items:flex-start;gap:.6rem; }
+  }
+  @media(max-width:500px) {
+    .footer-links { grid-template-columns:1fr; }
+  }
+
+  </style>
+</head>
+<body>
+  <div id="site-header"></div>
+
+<section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Get in Touch</div>
+      <h1>Let's have a<br/><em>real conversation.</em></h1>
+      <p class="hero-sub">No forms that go nowhere. No automated response. When you send this, it comes directly to me.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="first_name" placeholder="James" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="last_name" placeholder="Smith" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="(954) 555-0100"/>
+        </div>
+
+        <div class="form-group full">
+          <label for="topic">What's this about?</label>
+          <select id="topic" name="topic">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="mortgage">Mortgage / Home Financing</option>
+            <option value="business-capital">Business Capital</option>
+            <option value="real-estate">Real Estate</option>
+            <option value="speaking">Speaking Inquiry</option>
+            <option value="sonflower">The SonFlower & the Bear</option>
+            <option value="general">General / Just Reaching Out</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Tell me what's on your mind..." required></textarea>
+        </div>
+
+      </div>
+
+      <!-- Hidden field routes to correct email -->
+      <input type="hidden" name="_replyto" value="jim@jamesjblackburn.com"/>
+      <input type="hidden" name="_subject" value="New message from jamesjblackburn.com"/>
+
+      <div class="form-footer">
+        <button type="submit" class="btn-submit">Send Message →</button>
+        <p class="form-note">This goes directly to Jim. No pitch. No pressure. Just a conversation.</p>
+      </div>
+
+      <div class="success-msg" id="successMsg">
+        Got it — I'll be in touch. Thanks for reaching out.
+      </div>
+
+    </form>
+  </section>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('successMsg');
+    form.addEventListener('submit', function(e) {
+      // Let Formspree handle submission — show success after
+      setTimeout(() => {
+        msg.style.display = 'block';
+        form.reset();
+      }, 800);
+    });
+  </script>
+
+  <div id="site-footer-wrapper"></div>
+  <script src="components/components.js"></script>
+</body>
+</html>

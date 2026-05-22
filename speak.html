@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Speak | Jim Blackburn — Free School Assembly Talk</title>
+  <meta name="description" content="Jim Blackburn speaks at middle schools in Broward County and South Florida. Free 25-minute assembly talk for 6th and 7th graders about phones, presence, and what they're actually missing."/>
+  <link rel="canonical" href="https://www.jamesjblackburn.com/speak"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --navy:#1e2d40;--navy-dark:#16212f;--navy-light:#243550;
+      --cream:#f5f0e8;--cream-dark:#ebe4d8;--cream-mid:#e0d8cc;
+      --ink:#1a1614;--slate:#3d3530;--warm:#c9a96e;--rust:#b85c38;
+      --white:#ffffff;
+      --serif:'Playfair Display',Georgia,serif;
+      --sans:'Inter',sans-serif;
+    }
+    html,body{background:var(--navy-dark);color:var(--white)}
+    body{font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+
+    /* ── HERO ── */
+    .hero{
+      background:var(--navy);
+      padding:6rem 4rem 5rem;
+      text-align:center;
+      position:relative;overflow:hidden;
+    }
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:radial-gradient(ellipse at 50% 60%,rgba(201,169,110,.06) 0%,transparent 70%);
+    }
+    .hero-eyebrow{
+      font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;
+      color:var(--warm);margin-bottom:1.5rem;
+      display:flex;align-items:center;justify-content:center;gap:.8rem;
+    }
+    .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:24px;height:1px;background:var(--warm);opacity:.5}
+    h1{
+      font-family:var(--serif);
+      font-size:clamp(3rem,7vw,6.5rem);
+      font-weight:700;line-height:1.0;
+      color:var(--white);
+      margin-bottom:1.5rem;
+      position:relative;z-index:1;
+    }
+    h1 em{font-style:italic;color:var(--rust);display:block}
+    .hero-sub{
+      font-size:1rem;color:rgba(255,255,255,.6);
+      max-width:480px;margin:0 auto 2.5rem;line-height:1.7;
+    }
+    .hero-tags{
+      display:flex;flex-wrap:wrap;justify-content:center;
+      gap:.6rem;margin-bottom:2.5rem;
+    }
+    .tag{
+      font-size:.58rem;letter-spacing:.1em;
+      border:1px solid rgba(255,255,255,.2);
+      color:rgba(255,255,255,.6);
+      padding:.35rem .9rem;
+    }
+    .btn-primary{
+      display:inline-block;
+      background:var(--rust);color:var(--white);
+      font-family:var(--sans);font-size:.7rem;font-weight:500;
+      letter-spacing:.12em;text-transform:uppercase;
+      text-decoration:none;padding:1rem 2.2rem;
+      transition:background .2s;
+    }
+    .btn-primary:hover{background:#c96840}
+
+    /* ── ABOUT STRIP ── */
+    .about-strip{
+      background:var(--cream);
+      padding:4rem;
+      display:grid;grid-template-columns:200px 1fr;
+      gap:3rem;align-items:center;
+    }
+    .about-img{position:relative;text-align:center}
+    .about-img img{
+      width:160px;height:160px;
+      border-radius:50%;object-fit:cover;
+      border:4px solid var(--cream-dark);
+    }
+    .about-img-label{
+      position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);
+      background:var(--rust);color:var(--white);
+      font-size:.5rem;letter-spacing:.15em;text-transform:uppercase;
+      padding:.3rem .8rem;white-space:nowrap;
+    }
+    .about-text h2{
+      font-family:var(--serif);font-size:1.8rem;font-weight:400;
+      color:var(--navy);margin-bottom:1rem;
+    }
+    .about-text p{
+      font-size:.92rem;color:var(--slate);
+      line-height:1.8;margin-bottom:.8rem;
+    }
+
+    /* ── SECTIONS ── */
+    .section{padding:5rem 4rem}
+    .section-cream{background:var(--cream)}
+    .section-navy{background:var(--navy)}
+    .section-navy-dark{background:var(--navy-dark)}
+    .section-eyebrow{
+      font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;
+      color:var(--warm);margin-bottom:1rem;
+    }
+    h2.section-title{
+      font-family:var(--serif);
+      font-size:clamp(1.8rem,3vw,2.8rem);
+      font-weight:400;line-height:1.2;margin-bottom:1.5rem;
+    }
+    .section-navy h2.section-title,.section-navy-dark h2.section-title{color:var(--white)}
+    .section-cream h2.section-title{color:var(--navy)}
+    .body-text{
+      font-size:.95rem;color:rgba(255,255,255,.65);
+      line-height:1.85;max-width:700px;margin-bottom:1.2rem;
+    }
+    .body-text-dark{color:var(--slate)}
+
+    /* ── STORY / BLOCKQUOTE ── */
+    .story-quote{
+      border-left:3px solid var(--rust);
+      padding:1.2rem 0 1.2rem 2rem;
+      margin:2rem 0;
+      background:rgba(184,92,56,.05);
+    }
+    .story-quote p{
+      font-family:var(--serif);font-size:1.1rem;font-style:italic;
+      color:var(--navy);margin-bottom:.4rem;
+    }
+    .story-quote cite{font-size:.6rem;letter-spacing:.1em;color:var(--rust);text-transform:uppercase}
+    .section-navy .story-quote p{color:rgba(255,255,255,.85)}
+    .section-navy .story-quote{background:rgba(255,255,255,.04);border-color:var(--warm)}
+    .section-navy .story-quote cite{color:var(--warm)}
+
+    /* ── 4 PILLARS ── */
+    .pillars{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      gap:1px;background:rgba(255,255,255,.08);
+      margin-top:3rem;
+    }
+    .pillar{background:var(--navy-light);padding:2rem 1.5rem}
+    .pillar-num{
+      font-family:var(--serif);font-size:2rem;font-weight:400;
+      color:var(--warm);margin-bottom:.8rem;
+    }
+    .pillar h3{
+      font-family:var(--serif);font-size:1rem;font-weight:400;
+      color:var(--white);margin-bottom:.6rem;
+    }
+    .pillar p{font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.7}
+
+    /* ── STORY ITEMS ── */
+    .story-items{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
+    .story-item h3{
+      font-family:var(--sans);font-size:.78rem;font-weight:600;
+      color:var(--white);margin-bottom:.3rem;letter-spacing:.05em;
+    }
+    .story-item p{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.7}
+
+    /* ── STATS ── */
+    .stats{
+      display:grid;grid-template-columns:repeat(5,1fr);
+      gap:1px;background:rgba(0,0,0,.2);
+      margin-top:3rem;
+    }
+    .stat{
+      background:var(--cream);
+      padding:2rem 1.5rem;text-align:center;
+    }
+    .stat-value{
+      font-family:var(--serif);font-size:1.6rem;font-weight:400;
+      color:var(--navy);margin-bottom:.3rem;
+    }
+    .stat-label{font-size:.65rem;color:var(--slate);letter-spacing:.05em}
+
+    /* ── BOOKING ── */
+    .booking-wrap{max-width:560px;margin:2.5rem auto 0;text-align:center}
+    .booking-wrap p{font-size:.9rem;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:2rem}
+    .booking-contacts{
+      display:flex;justify-content:center;gap:2rem;
+      margin-top:1.5rem;flex-wrap:wrap;
+    }
+    .booking-contacts a{
+      font-size:.7rem;color:rgba(255,255,255,.4);
+      text-decoration:none;letter-spacing:.05em;transition:color .2s;
+    }
+    .booking-contacts a:hover{color:var(--warm)}
+
+    /* ── FOOTER MINI ── */
+    .footer-mini{
+      background:#090908;
+      border-top:1px solid rgba(201,169,110,.08);
+      padding:1.5rem 4rem;
+      display:flex;justify-content:space-between;align-items:center;
+      flex-wrap:wrap;gap:1rem;
+      font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;
+      color:rgba(255,255,255,.2);
+    }
+    .footer-mini a{color:inherit;text-decoration:none;transition:color .2s}
+    .footer-mini a:hover{color:var(--warm)}
+
+    @media(max-width:900px){
+      .hero{padding:5rem 1.5rem 4rem}
+      .about-strip{grid-template-columns:1fr;padding:3rem 1.5rem;text-align:center}
+      .about-img{margin-bottom:1rem}
+      .section{padding:4rem 1.5rem}
+      .pillars{grid-template-columns:1fr 1fr}
+      .stats{grid-template-columns:repeat(3,1fr)}
+      .footer-mini{padding:1.5rem;flex-direction:column;text-align:center}
+    }
+    @media(max-width:480px){
+      .pillars{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER LOADS HERE -->
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-eyebrow">Free School Assembly Talk</div>
+    <h1>Autopilot Is<br/><em>Killing Your<br/>Childhood.</em></h1>
+    <p class="hero-sub">A raw, honest 25-minute talk for 6th and 7th graders about phones, presence, and what they're actually missing.</p>
+    <div class="hero-tags">
+      <span class="tag">Grades 6–7</span>
+      <span class="tag">20–25 Minutes</span>
+      <span class="tag">No Tech Required</span>
+      <span class="tag">Free to Your School</span>
+      <span class="tag">Broward County &amp; South Florida</span>
+    </div>
+    <a href="#book-jim" class="btn-primary">Request Jim for Your School</a>
+  </section>
+
+  <!-- ABOUT -->
+  <div class="about-strip">
+    <div class="about-img">
+      <!-- Replace src with Jim's actual photo -->
+      <img src="https://jamesjblackburn.com/wp-content/uploads/2026/03/download.jpg" alt="Jim Blackburn — Author & Speaker"/>
+      <span class="about-img-label">Author &amp; Speaker</span>
+    </div>
+    <div class="about-text">
+      <h2>Hi. I'm Jim Blackburn.</h2>
+      <p>I'm a Fort Lauderdale-based author, speaker, and entrepreneur. I come to middle schools and tell students something most adults are afraid to say out loud.</p>
+      <p>I know what it feels like to be so locked into a screen that you miss what's right in front of you. I learned it the hardest possible way. And I come to your school so your students don't have to.</p>
+    </div>
+  </div>
+
+  <!-- LOLLIPOP STORY -->
+  <section class="section section-cream">
+    <div class="section-eyebrow">The Talk Opens With This</div>
+    <h2 class="section-title">The story that silences a room in 30 seconds.</h2>
+    <p class="body-text body-text-dark">Two years ago, I got a phone call as I was pulling into my driveway. I walked inside, sat down at my desk in front of six monitors, and went into work mode. I forgot my dog Lollipop was in the car. Six hours later — she was gone.</p>
+    <div class="story-quote" style="border-color:var(--rust);background:rgba(184,92,56,.06)">
+      <p style="color:var(--navy)">"I had been living on autopilot. And it killed something I loved."</p>
+      <cite style="color:var(--rust)">— The moment that changed everything</cite>
+    </div>
+    <p class="body-text body-text-dark">Every kid in that room has a phone. Every kid in that room has felt the hollow feeling after an hour of scrolling. This story doesn't lecture them about it. It shows them where that road ends. And then it shows them the way out.</p>
+  </section>
+
+  <!-- 4 PILLARS -->
+  <section class="section section-navy">
+    <div class="section-eyebrow">What Students Take Home</div>
+    <h2 class="section-title">Four things they're living with right now — finally named.</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>Autopilot &amp; The Phone</h3>
+        <p>Their devices are engineered to keep them distracted. Here's what that's actually costing them.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>The Hunger for Attention</h3>
+        <p>Every kid wants to feel seen. The phone exploits that need without ever satisfying it.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>Skin Starvation</h3>
+        <p>This generation is the least physically connected in history. Their nervous systems are paying the price.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">04</div>
+        <h3>The Power to Reframe</h3>
+        <p>Humans can take the worst moment and turn it into a catalyst. That superpower is available to them right now.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT UNLOCKED -->
+  <section class="section section-navy-dark">
+    <div class="section-eyebrow">The Talk Opens With This</div>
+    <h2 class="section-title" style="color:var(--white)">What happened after the worst day of my life.</h2>
+    <p class="body-text">I don't just share the tragedy. I share what it unlocked.</p>
+    <div class="story-items">
+      <div class="story-item">
+        <h3>The wake-up call</h3>
+        <p>Lollipop's death forced me to confront how deeply on autopilot I'd been living. My wife called me a walking robot.</p>
+      </div>
+      <div class="story-item">
+        <h3>I read the Bible cover to cover — at 47</h3>
+        <p>For the first time in my life. That decision cracked something open.</p>
+      </div>
+      <div class="story-item">
+        <h3>I wrote 13 books</h3>
+        <p>A series called The SonFlower and the Bear — born directly from waking up.</p>
+      </div>
+      <div class="story-item">
+        <h3>I became a speaker</h3>
+        <p>None of it happens without that terrible Tuesday morning. Now I come to your school so your students can wake up before something forces them to.</p>
+      </div>
+    </div>
+    <div class="story-quote" style="margin-top:2.5rem">
+      <p>"The phone will always be there. Your childhood won't."</p>
+      <cite>— Jim Blackburn, closing line of the talk</cite>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section section-cream" style="padding-top:4rem;padding-bottom:4rem">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-value">Free</div>
+        <div class="stat-label">No cost to your school</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">20–25 min</div>
+        <div class="stat-label">Assembly or classroom</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">Grades 6–7</div>
+        <div class="stat-label">Tailored for middle school</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">48 hrs</div>
+        <div class="stat-label">Response time guaranteed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">S. Florida</div>
+        <div class="stat-label">Broward &amp; surrounding area</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section section-navy" id="book-jim" style="text-align:center">
+    <div class="section-eyebrow" style="justify-content:center">Book Jim</div>
+    <h2 class="section-title">Request a school visit.</h2>
+    <div class="booking-wrap">
+      <p>Fill out the short form and Jim will be in touch within 48 hours to find a date that works for your school. Free, flexible, and built for your students.</p>
+      <a href="mailto:speak@jamesjblackburn.com?subject=Speaking Request — School Assembly" class="btn-primary">Request a Booking →</a>
+      <div class="booking-contacts">
+        <a href="mailto:speak@jamesjblackburn.com">speak@jamesjblackburn.com</a>
+        <a href="https://www.jamesjblackburn.com/speak">jamesjblackburn.com/speak</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER LOADS HERE -->
+  <div id="site-footer-wrapper"></div>
+  <script src="components/components.js"></script>
+
+</body>
+</html>
