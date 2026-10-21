@@ -337,7 +337,7 @@
   </section>
 
   <section class="form-section">
-    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form id="contactForm">
 
       <div class="form-grid">
 
@@ -381,16 +381,12 @@
 
       </div>
 
-      <!-- Hidden field routes to correct email -->
-      <input type="hidden" name="_replyto" value="jim@jamesjblackburn.com"/>
-      <input type="hidden" name="_subject" value="New message from jamesjblackburn.com"/>
-
       <div class="form-footer">
         <button type="submit" class="btn-submit">Send Message →</button>
         <p class="form-note">This goes directly to Jim. No pitch. No pressure. Just a conversation.</p>
       </div>
 
-      <div class="success-msg" id="successMsg">
+      <div class="success-msg" id="successMsg" data-ok="Got it — I'll be in touch. Thanks for reaching out.">
         Got it — I'll be in touch. Thanks for reaching out.
       </div>
 
@@ -398,15 +394,40 @@
   </section>
 
   <script>
-    const form = document.getElementById('contactForm');
-    const msg = document.getElementById('successMsg');
-    form.addEventListener('submit', function(e) {
-      // Let Formspree handle submission — show success after
-      setTimeout(() => {
-        msg.style.display = 'block';
-        form.reset();
-      }, 800);
-    });
+    // Sends this form to Jim's CRM (OneFocus). Each message becomes a contact,
+    // Jim gets an email alert, and the sender gets a confirm-your-email note.
+    (function () {
+      var form = document.getElementById('contactForm');
+      var done = document.getElementById('successMsg');
+      var btn = form.querySelector('button[type="submit"]');
+      var MAP = {};
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var out = { form: 'contact' };
+        new FormData(form).forEach(function (v, k) {
+          if (k.charAt(0) === '_' || v === '') return;
+          out[MAP[k] || k] = v;
+        });
+        out.name = [out.first_name, out.last_name].filter(Boolean).join(' ');
+        var label = btn.textContent;
+        btn.disabled = true; btn.textContent = 'Sending…';
+        try {
+          var r = await fetch('https://www.onefocuscrm.com/api/forms/jamesjblackburn', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json' },
+            body: JSON.stringify(out)
+          });
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          form.reset();
+          done.textContent = done.dataset.ok || done.textContent;
+          done.style.display = 'block';
+        } catch (err) {
+          done.textContent = 'Sorry — that didn\u2019t go through. Please try again in a moment.';
+          done.style.display = 'block';
+        }
+        btn.disabled = false; btn.textContent = label;
+      });
+    })();
   </script>
 
   <div id="site-footer-wrapper"></div>
